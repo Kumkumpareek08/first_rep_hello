@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units, css display property ,CSS Shadows and Outlines</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .box {
+            border: 2px solid black; /* width: 2046px; */
+            width: 80vw;
+            margin: auto; /* div will align in center nd not appear in inline elements*/
+            background-color: yellowgreen;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 2px solid black; /* width: 2046px; */
+            width: 80vw; /* height: 80vh; */
+            margin: 23px auto;  /* div will align in center nd not appear in inline elements*/
+            background-color: yellowgreen;
+            box-sizing: border-box;
+            font-size: 16px;
+            min-height: 80vh; /* adjust hegiht according to context  */
+        }
+
+        .container p {
+            font-size: 2em; /* inherit krke jo value milegi unka 2* for ex font size 16 h toh 32 hojayega */
+            /* font-size: 2rem;  */ /* root ka 2x */
+            border: 2px solid red;
+            width: 50%;
+        }
+
+        .mycont {
+            background-color: yellow;
+            color: red;
+            font-size: 22px;
+            width: 100vmin;
+            box-sizing: border-box;
+            border: 2px solid black;
+        }
+
+        /* css display property */
+        .display_inline{
+        border:2px solid rgb(202, 242, 6);
+        display:inline-block;
+        padding: 22px;
+        margin: 32px;
+        }
+
+        /* CSS Shadows and Outlines */
+        .v24{
+            border: 2px solid pink;
+            box-shadow: 2px 12px 30px;
+            /*  left to right space,thickness,Dark nd lightness of shadow*/
+            padding: 30px;
+            border-radius: 90px;
+         box-shadow: inset 2px 1px 14px;
+         /* to put shadow inside the box we use inset */
+            text-shadow:2px 2px 2px rgb(228, 31, 13);
+            outline: 2px solid rgb(7, 245, 126);
+            outline-offset: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eum a ipsum magnam nemo nostrum est reprehenderit odit exercitationem officiis.</p>
+        </div>
+    <div class="mycont">
+        I am vmin and vmax container
+    </div>
+
+
+    <!-- Css display property -->
+<div class="display_inline">I am a box</div>
+<div class="display_inline">I am another box</div>
+<span>I am a good</span>
+<span>boy.</span>
+
+<!-- CSS Shadows and Outlines -->
+ <div class="v24">I am a video 24 box</div>
+</body>
+
+</html>

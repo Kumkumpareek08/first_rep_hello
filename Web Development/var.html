@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css var, media queries</title>
+    <style>
+        :root {
+            /* [to declare global var] */
+            --color: rgb(202, 202, 248);
+            --seccolor: rgb(176, 176, 245);
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul {
+            display: flex;
+            /*[align big content horizontally] */
+        }
+
+        ul li {
+            list-style: none;
+            padding: 34px;
+            border: 2px solid var(--color);
+            opacity: 0.40;
+        }
+
+        .nav {
+            background-color: rgb(22, 237, 112);
+            background-color: var(--seccolor);
+        }
+
+        .container {
+            background-color: rgb(174, 251, 211);
+            background-color: var(--seccolor);
+        }
+
+        ul li:first-child {
+            --local_color: rgb(240, 171, 182);
+            /* [local var]  */
+            background-color: var(--local_color);
+        }
+
+        /* media queries */
+        body {
+            background-color: red;
+        }
+
+        @media only screen and (max-width: 455px) {
+             /* @media not only mediatype nd (expr) css-code --> */
+            body{
+                background-color: blue;
+            }
+
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            width: 344px;
+            height: 344px;
+            background-color: blueviolet;
+            padding: 3px;
+            margin: 3px;
+        }
+
+        @media screen and(orientation:portrait) 
+        {
+            body {
+                border: 2px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate cumque quod iste
+        quaerat eaque veniam libero quidem facilis hic.</div>
+<div>Hey I am a red body guy</div>
+<!-- media queries  -->
+<div class="boxes">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+
+</html>
