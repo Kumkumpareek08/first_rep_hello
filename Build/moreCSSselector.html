@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .box:first-child{
+background-color: blueviolet;
+}
+.box::first-line{
+    color:white;
+} 
+ .boxes *{
+ color: red;
+ border: 2px solid yellow;
+    }
+[data-color="primary"]{
+    margin-top: 40px;
+    background-color: aqua;
+}
+ p, a, .box, [data-color="primary"]{ 
+    /* [grp krke bhi lga skte h]  */
+   margin-top: 40px;
+    background-color: aqua; }
+.box:nth-last-child(2){
+    color:red
+}
+.boxes::before{  
+    /* [insert element dynamically through css]  */
+     content: "Kumkum is Superb!";
+}  
+::selection{   
+    /* [kisi element ko select krte time style apply krta h] */
+    color:rgb(245, 1, 131);
+    background-color: rgb(99, 195, 163);
+   }
+    
+    .box::first-letter{
+        color: blue;
+        font-size: x-large;
+    }
+
+    input::placeholder{
+color: rgb(42, 6, 249);
+    }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+    <div class="box">I am a 1 box</div>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis similique eius, veniam voluptatum nam repudiandae temporibus, vitae maxime cumque sapiente possimus illum! Qui praesentium ex maxime? Libero quas laboriosam unde.</div>
+    <div data-color="primary" class="box">I am a box 3</div>
+   <input type="text" placeholder="Enter ur name">
+</div>
+</body>
+</html>
